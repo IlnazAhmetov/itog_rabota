@@ -1,0 +1,292 @@
+/*Основа*/
+*{
+    box-sizing: border-box;
+}
+body{
+    padding: 0%;
+    margin: 0%;
+    background-image:url(img/background2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+/*Шапка сайта*/
+.header{
+    background-color: black;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    transition: all .2s ease;
+    -webkit-box-shadow: 0px 5px 5px -5px rgb(255, 255, 255); 
+    -moz-box-shadow: 0px 5px 5px -5px rgb(191, 204, 214);
+    box-shadow: 0px 5px 5px -5px rgb(148, 162, 174);
+}
+.header.fixed{
+    position: fixed;
+    transform:  translateY(100px);
+}
+.header__wrapper{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/*Ссылки*/
+a.navigation{
+    text-decoration: none;
+    color: orangered;
+    font-size: 17px;
+}
+/*Анимация наведения*/
+a.navigation:hover{
+    background-color: orangered;
+    color: black;
+}
+/*Тексты, шрифты, заголовки*/
+h2.logo{
+    color: orangered;
+    margin-left: 10px;
+    font-size: 30px;
+    animation: logoScale 3s infinite; 
+}
+@keyframes logoScale {
+    0% {
+      transform: scaleX(1) scaleY(1);
+      }
+    25% {
+      transform: scaleX(1.5) scaleY(1.5);
+      }
+      50%{
+        transform: scaleX(2) scaleY(2);
+      }
+      75%{
+        transform: scaleX(1.5) scaleY(1.5);
+      }
+    100%{
+        transform: scaleX(1) scaleY(1);
+      }
+  }
+/* Poisk */
+input{
+ width: 150%;
+ border-radius: 8px;
+ background-color: #393839;
+}
+
+
+/*Навигация*/
+/* nav{
+    color: orangered;
+} */
+li.navigation{
+    margin-right: 15px;
+    display: inline-block;
+}
+/*Тело сайта*/
+.bodyA{
+    width: 100%;
+    height: 100vh;
+    padding-top: 5px;
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+/*Логотип*/
+img.logotip{
+    width: 70px;
+    height: 70px;
+}
+/*Блок с играми*/
+.gamee{
+    background-color: #000000;
+    width: 400px;
+    height: 200px;
+    border-radius: 5%;
+    border: 5px outset #FF1919;
+    margin: 8% auto;
+    display: inline-block;
+}
+.gamee.A{
+  
+}
+.gamee.B{
+    
+}
+.gamee.C{
+    
+}
+/* фото в блоках */
+.photoGAME.horizont{
+    width: 160px;
+    height: 100px;
+}
+.photoGAME{
+    height: 100px;
+    width: 80px;
+    background-color: rgb(0, 0, 0);
+    margin-top: 10px;
+    margin-left: 10px;
+    float: left;
+}
+
+img.pg{
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+}
+/* текст в блоках */
+h4.nazvan{
+    color: aliceblue;
+}
+.nazvanie.hor{
+    margin: 2% 2%;
+}
+.nazvanie{
+    width: 200px;
+    height: 20px;
+    float: left;
+    margin: 2% 3%;
+    font-size: 12pt;
+}
+
+.opisanie.hor{
+    width: 200px;
+}
+.opisanie{
+    width: 270px;
+    height: 100px;
+    float: left;
+    margin-left: 2%;
+}
+p.opisan{
+    color: aliceblue;
+}
+/*Кнопки в блоках*/
+.gamebtn{
+    width: 110px;
+    height: 20px;
+    margin-top: 8%;
+    margin-left: 60%;
+    float: left;
+}
+.phone{
+    display: none;
+}
+/* Анимация */
+
+
+
+/* Адаптивная верстка планшет */
+@media screen and (max-width: 760px) {
+    .phone{
+        display: none;
+    }
+    .bodyA{
+        width: 100%;
+        height: 100vh;
+        padding-top: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0% auto;
+    }
+
+    
+    body{
+        padding: 0;
+        margin: 0;
+        background-image:url(img/background2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    nav{
+        display: none;
+    }
+    input{
+        width: 100px;
+    }
+}
+/* Адаптивная верстка телефон */
+@media  screen and (max-width: 480px) {
+    .phone{
+        display: inline;
+        width: 100%;
+        height: 30px;
+        background-color: #000000;
+        margin-top: -30px;
+        text-align: center;
+    }
+    .header__wrapper{
+        display: none;
+    }
+    img.logotip{
+        display: none;
+    }
+    h2.logo{
+        margin: 0 auto;
+    }
+    .bodyA{
+        width: 100%;
+        height: 100vh;
+        padding-top: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 5% auto;
+    }
+    body{
+        padding: 0;
+        margin: 0;
+        background-image:url(img/background2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    .gamee{
+        width: 200px;
+        height: 140px;
+        margin: 3% auto;
+    }
+    .nazvanie.hor{
+        font-size: 5pt;    
+    }
+    .nazvanie{
+        font-size: 5pt;
+        width: 50px;
+        height: 5px;
+    }
+    .opisanie.hor{
+        font-size: 6pt;
+        width: 80px;
+        margin-left: 2%;
+    }
+    .opisanie{
+        font-size: 6pt;
+        width: 90px;
+        height: 50%;
+        margin: 5%;
+    }
+    .photoGAME.horizont{
+        width: 70px;
+        height: 40px;
+    }
+    .photoGAME{
+        width: 40px;
+        height: 60px;
+    }
+    .gamebtn{
+        width: 70px;
+        height: 20px;
+        margin: 5% 30%;
+        font-size: 6pt;
+    }
+    form{
+        display: none;
+    }
+    h3.ph{
+        color: orangered;
+        font-size: 7pt;
+    }
+}
+
+/*Подвал сайта*/
